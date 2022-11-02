@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html><head><title>Simple Calculator</title></head>
+<body align="center">
+    <h1> Simple Calculator </h1>
+    <div class="container-fluid">
+	<table cellspacing="2" align="center" cellpadding="10" border="0">
+	<td><input type="text" placeholder="Enter First Number" id="number1"></td></tr>
+    <td><input type="text" placeholder="Enter Second Number" id="number2"></td></tr>
+		<tr><td>
+        <button type="button" onclick="add()">Add</button>
+		<button type="button" onclick="multiple()">Multiply</button>
+		<button type="button" onclick="subtract()">Subtract</button>
+		<button type="button" onclick="division()">Division</button>
+		<button type="button" onclick="reset()">Reset</button>
+        <p id="result"></p>
+		</table>
+    </div>
+    
+    <script>
+        function add(){
+            var a =  document.getElementById("number1").value;
+            var b =  document.getElementById("number2").value;
+            var c = parseInt(a) + parseInt(b); 
+
+            document.getElementById("result").innerHTML="Sum of number is:" + c;
+        }
+		
+		function multiple(){
+            var a =  document.getElementById("number1").value;
+            var b =  document.getElementById("number2").value;
+            var c = parseInt(a) * parseInt(b); 
+
+            document.getElementById("result").innerHTML="Product of number is:" + c;
+		}
+		
+		function subtract(){
+            var a =  document.getElementById("number1").value;
+            var b =  document.getElementById("number2").value;
+            var c = parseInt(a) - parseInt(b); 
+
+            document.getElementById("result").innerHTML="Difference of number is:" + c;	
+		}
+		
+		function division(){
+            var a =  document.getElementById("number1").value;
+            var b =  document.getElementById("number2").value;
+            var c = parseInt(a) / parseInt(b); 
+
+            document.getElementById("result").innerHTML="Quotient of number is:" + c;
+		}
+		
+		function reset(){
+            document.getElementById("number1").value="0";
+            document.getElementById("number2").value="0";
+			document.getElementById("result").innerHTML=":" + "0";
+			}
+					   
+    </script>
+
+</body>
+</html>
